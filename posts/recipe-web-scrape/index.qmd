@@ -17,7 +17,7 @@ format:
 
 ## Introduction
 
-This web scraping blog post is heavily inspired by the [Paprika App](https://www.paprikaapp.com/) which I just started using. It saves the recipe information and gets rid of all of the annoying ads. My biggest pet peeve is scrolling through 5 million pop-up ads to get to a recipe. This blog post is really just to see if I could web scrape in ObservableJS. I plan on creating an actual recipe web app with Sveltekit eventually where I can save recipe information to my own database. But for now this is my proof of concept.
+This web scraping blog post is heavily inspired by the [Paprika App](https://www.paprikaapp.com/) which I just started using. It saves the recipe information and gets rid of all of the annoying ads. My biggest pet peeve is scrolling through 5 million pop-up ads to get to a recipe. This blog post is really just to see if I could web scrape in ObservableJS. I plan on creating an actual recipe web app eventually where I can display my recipe information from my own database. But for now this is my proof of concept.
 
 
 ## How it Works

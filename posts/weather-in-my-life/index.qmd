@@ -1,10 +1,9 @@
 ---
 title: Weather In My Life
 author: Scott Franz
-date: last-modified
-draft: true
-abstract: A look into the weather in my life.
-image: picture.jpg
+date: 2024-10-19
+abstract: A look into the weather of my life.
+image: aaweather.jpg
 image-alt: Weather Heatmaps
 categories: [Observable JS, Weather, Quantified Self]
 format:
@@ -16,3 +15,207 @@ format:
     code-tools: true
 ---
 
+
+The inspiration for this blog post comes from [Volodymyr Agafonkin's old Observable Notebook](https://observablehq.com/@mourner/were-kyiv-winters-as-snowy-as-i-remember-as-a-kid){target="_blank"} where he looked back at how snowy his childhood winters were in Ukraine. I used [NOAA's Climate Data Online](https://www.ncdc.noaa.gov/cdo-web/){target="_blank"} to fetch the weather data of the three places I have lived so far in my life. Here are the highlights, but feel free to look through the heatmap yourself.
+
+- 🌡️ Hottest day of my life: ${weekdayFormatter(hottestDay.DATE)}, ${formatter(hottestDay.DATE)} — ${hottestDay.TMAX}°F in ${hottestDay.NAME}
+- 🥶 Coldest day of my life: ${weekdayFormatter(coldestDay.DATE)}, ${formatter(coldestDay.DATE)} — ${coldestDay.TMIN}°F in ${coldestDay.NAME}
+- ❄️ Snowiest day of my life: ${weekdayFormatter(snowiestDay.DATE)}, ${formatter(snowiestDay.DATE)} — ${snowiestDay.SNOW} in. of snow in ${snowiestDay.NAME}
+- 🌧️ Wettest day of my life: ${weekdayFormatter(wettestDay.DATE)}, ${formatter(wettestDay.DATE)} — ${wettestDay.PRCP} in. of rain in ${wettestDay.NAME}
+
+One of my most memorable days of childhood was the one and only snow day in Bakersfield, CA on ${weekdayFormatter(bakersfieldSnowDay.DATE)}, ${formatter(bakersfieldSnowDay.DATE)} it was ${bakersfieldSnowDay.SNOW} inches of snow and we were able to make a snowman and have a neighborhood snowball fight. I also remember the first snowfall we had in Ann Arbor on ${weekdayFormatter(snowiestDay.DATE)}, ${formatter(snowiestDay.DATE)}, it turns out (to my surprise) to be the biggest we have had since we moved here almost 10 years ago!
+
+```{ojs}
+
+import {Inputs} from "@observablehq/inputs";
+
+viewof metric = Inputs.select(
+[
+{label: "Snow (in)", code: "SNOW"},
+{label: "Precipitation (in)", code: "PRCP"},
+{label: "Max temp (°F)", code: "TMAX"},
+{label: "Min temp (°F)", code: "TMIN"}
+],
+{
+label: "Variable",
+value: "TMAX",
+format: d => d.label,
+valueof: d => d.code 
+}
+)
+
+viewof positiveOnly = Inputs.toggle({
+  label: "Show days > 0 in",
+  value: false
+})
+
+datasets = ({
+  "Bakersfield": Bakersfield,
+  "San Diego": SanDiego,
+  "Ann Arbor": AnnArbor,
+  "All areas combined": combinedDataset
+})
+
+viewof location = Inputs.select(
+  Object.keys(datasets),
+  {label: "Location", value: "All areas combined"}
+)
+
+metricUnits = ({
+  SNOW: "in",
+  PRCP: "in",
+  TMAX: "°F",
+  TMIN: "°F"
+})
+
+heatmapHeight = {
+  if (location === "All areas combined") {
+    if (metric === "SNOW" && positiveOnly) return undefined;
+    return 3200;
+  }
+  return undefined;
+}
+
+noDataMessage = (
+  positiveOnly && location === "San Diego" && metric === "SNOW"
+    ? "San Diego snow? Not in this climate 😄"
+    : positiveOnly
+    ? "No days > 0 for this metric and location with the current filter."
+    : "No data for this metric and location."
+)
+
+dataForPlot = datasets[location]
+
+filteredDataForPlot = dataForPlot.filter(d => {
+  const v = +d[metric] || 0;
+
+  if (!positiveOnly) return true;
+
+  if (metric === "SNOW" || metric === "PRCP") return v > 0;
+
+  return true;
+})
+
+maxValue = d3.max(filteredDataForPlot, d => +d[metric] || 0) || 1
+
+
+blueSchemes = ["SNOW", "PRCP"]
+
+colorScheme = (
+metric === "SNOW" ? {type: "linear", scheme: "BuPu"} :
+metric === "PRCP" ? {type: "linear", scheme: "BuPu"} :
+metric === "TMAX" ? {type: "linear"} :
+metric === "TMIN" ? {type: "linear", scheme: "Cool"} :
+{type: "linear"} 
+)
+
+html`<div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-end; white-space: nowrap;">${viewof metric}${viewof location}${viewof positiveOnly}</div>`;
+
+(filteredDataForPlot.length
+  ? Plot.plot({
+  height: heatmapHeight,
+  x: {axis: null},
+  y: {
+    tickFormat: Plot.formatWeekday("en", "narrow"),
+    tickSize: 0
+  },
+  fy: {tickFormat: ""},
+  color: {
+    legend: true,
+    marginLeft: 5,
+    domain: [0, maxValue],
+    ...colorScheme
+  },
+  marks: [
+    Plot.cell(filteredDataForPlot, {
+      x: d => d3.utcWeek.count(d3.utcYear(d.DATE), d.DATE),
+      y: d => d.DATE.getUTCDay(),
+      fy: d => d.DATE.getUTCFullYear(),
+      fill: d => +d[metric] || 0,
+      title: d =>
+        `${d.NAME}\n${formatter(d.DATE)} – ${d[metric]} ${metricUnits[metric] ?? ""}`,
+      inset: 0.5
+    })],
+    tooltip: {
+    stroke: "red",
+    "stroke-width": "1.5px"
+  }
+})
+: md`${noDataMessage}`)
+```
+
+## Appendix
+
+```{ojs}
+
+
+import {Plot} from "@mkfreeman/plot-tooltip";
+
+data1 = FileAttachment("3819435.csv").csv()
+data2 = FileAttachment("3819711.csv").csv()
+data3 = FileAttachment("3819747.csv").csv()
+
+parser = d3.timeParse("%Y-%m-%d")
+formatter = d3.utcFormat("%b %-d, %Y")
+
+Bakersfield = { // This creates new variables
+  const subset = data1.map(
+    ({ STATION, NAME, DATE, PRCP, SNOW, TMAX, TMIN }) => ({
+      STATION: STATION,
+      NAME: NAME,
+      DATE: parser(DATE),
+      PRCP: +PRCP,
+      SNOW: +SNOW,
+      TMAX: +TMAX,
+      TMIN: +TMIN
+    })
+  );
+
+  return subset;
+}
+
+bakersfieldAirport = Bakersfield.filter(d => d.STATION == "USW00023155")
+
+SanDiego = { // This creates new variables
+  const subset = data2.map(
+    ({ STATION, NAME, DATE, PRCP, SNOW, TMAX, TMIN }) => ({
+      STATION: STATION,
+      NAME: NAME,
+      DATE: parser(DATE),
+      PRCP: +PRCP,
+      SNOW: +SNOW,
+      TMAX: +TMAX,
+      TMIN: +TMIN
+    })
+  );
+
+  return subset;
+}
+
+AnnArbor = { // This creates new variables
+  const subset = data3.map(
+    ({ STATION, NAME, DATE, PRCP, SNOW, TMAX, TMIN }) => ({
+      STATION: STATION,
+      NAME: NAME,
+      DATE: parser(DATE),
+      PRCP: +PRCP,
+      SNOW: +SNOW,
+      TMAX: +TMAX,
+      TMIN: +TMIN
+    })
+  );
+
+  return subset;
+}
+
+combinedDataset = [...bakersfieldAirport, ...SanDiego, ...AnnArbor]
+
+hottestDay = d3.greatest(combinedDataset, d => +d.TMAX)
+coldestDay = d3.least(combinedDataset, d => +d.TMIN)
+snowiestDay = d3.greatest(combinedDataset, d => +d.SNOW)
+wettestDay = d3.greatest(combinedDataset, d => +d.PRCP)
+bakersfieldSnowDay = d3.greatest(Bakersfield.filter(d => +d.SNOW > 0), d => +d.SNOW)
+weekdayFormatter = d3.utcFormat("%A")
+
+
+```

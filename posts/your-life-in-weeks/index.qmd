@@ -48,8 +48,6 @@ This was my [inspiration](https://waitbutwhy.com/2014/05/life-weeks.html). Also 
 ## Math
 
 ```{ojs}
-//| echo: true
-//| code-fold: false
 
 today = new Date()
 

@@ -128,12 +128,3 @@ density = Plot.plot({
   ]
 })
 ```
-
-## Felt
-Last thing, I have been following Felt on twitter for a while now.
-I saw this [tweet](https://twitter.com/felt/status/1620467130826358784?s=20&t=CviOaHu67-VGvZzx11Ebrw) and immediately needed to try it. It was super simple to just drag and drop a .csv file and get going. Check it out! You should be able to edit this map if you create your own Felt account. Thanks for reading!
-
-```{ojs}
-html`
-<iframe width="100%" height="600" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/UK-Cats-Qkc0B5HpTzuh4xoLFJ446A?lat=50.418463&lon=-4.789399&zoom=9.138"></iframe>`
-```

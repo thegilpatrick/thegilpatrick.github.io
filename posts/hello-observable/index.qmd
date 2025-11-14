@@ -51,11 +51,11 @@ streamgraph
 If we wanted to import a map and a drop down menu from another notebook. We could do that too. This drop down menu (input) selects different map projections. Check it out! It is also interactive. Use your mouse to click and drag to explore.
 
 ```{ojs}
-import {chart as map, viewof projectionName} from "@d3/versor-dragging"
+import {chart as map, viewof projection} from "@d3/versor-dragging"
 ```
 
 ```{ojs}
-viewof projectionName
+viewof projection
 ```
 
 ```{ojs}

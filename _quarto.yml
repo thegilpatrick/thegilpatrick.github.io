@@ -16,22 +16,22 @@ website:
   google-analytics: 
     tracking-id: "G-Y5TZ8D5H35"
     anonymize-ip: true
-  site-url: https://thegilpatrick.com
+  site-url: https://thegilpatrick.github.io
   navbar:
     right:
       - icon: github
         menu:
           - text: Source Code
-            url:  https://github.com/thegilpatrick/Blog
+            url:  https://github.com/thegilpatrick/thegilpatrick.github.io
           - text: Report a Bug
-            url:  https://github.com/thegilpatrick/Blog/issues
+            url:  https://github.com/thegilpatrick/thegilpatrick.github.io/issues
     logo: thegilpatricklogo.png
     logo-alt: "The Gilpatrick logo."
     title: false
     background: white
     left:
       - text: "About"
-        file: about.qmd
+        href: https://scottfranz.github.io/
       - text: "Posts"
         file: index.qmd
 format:
