@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.176">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Scott Franz">
 <meta name="dcterms.date" content="2022-05-21">
 
-<title>Hello, Observable!</title>
+<title>Hello, Observable! – The Gilpatrick</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,6 +23,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -69,27 +70,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../thegilpatricklogo.png" rel="icon" type="image/png">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-db5470f6d8c306a9f3e34f18d935485a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -98,6 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -138,67 +143,68 @@ cookieconsent.run({
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Hello, Observable!">
 <meta property="og:description" content="A quick glance at Observable. A new reactive programming ecosystem geared towards data visualization.">
-<meta property="og:image" content="https://thegilpatrick.com/posts/hello-observable/observablelogo.png">
+<meta property="og:image" content="https://thegilpatrick.github.io/posts/hello-observable/observablelogo.png">
 <meta property="og:site_name" content="The Gilpatrick">
 <meta property="og:image:height" content="320">
 <meta property="og:image:width" content="847">
 <meta property="og:image:alt" content="ObservableHQ logo">
 <meta name="twitter:title" content="Hello, Observable!">
 <meta name="twitter:description" content="A quick glance at Observable. A new reactive programming ecosystem geared towards data visualization.">
-<meta name="twitter:image" content="https://thegilpatrick.com/posts/hello-observable/observablelogo.png">
+<meta name="twitter:image" content="https://thegilpatrick.github.io/posts/hello-observable/observablelogo.png">
 <meta name="twitter:image-height" content="320">
 <meta name="twitter:image-width" content="847">
 <meta name="twitter:image:alt" content="ObservableHQ logo">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../thegilpatricklogo.png" alt="The Gilpatrick logo." class="navbar-logo">
+    <img src="../../thegilpatricklogo.png" alt="The Gilpatrick logo." class="navbar-logo light-content">
+    <img src="../../thegilpatricklogo.png" alt="The Gilpatrick logo." class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="https://scottfranz.github.io/"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
         <li>
-    <a class="dropdown-item" href="https://github.com/thegilpatrick/Blog" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/thegilpatrick/thegilpatrick.github.io">
  <span class="dropdown-text">Source Code</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/thegilpatrick/Blog/issues" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/thegilpatrick/thegilpatrick.github.io/issues">
  <span class="dropdown-text">Report a Bug</span></a>
   </li>  
     </ul>
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -206,7 +212,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
@@ -220,9 +226,9 @@ cookieconsent.run({
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -259,12 +265,14 @@ cookieconsent.run({
   
 <div>
   <div class="abstract">
-    <div class="abstract-title">Abstract</div>
+    <div class="block-title">Abstract</div>
     A quick glance at Observable. A new reactive programming ecosystem geared towards data visualization.
   </div>
 </div>
 
+
 </header>
+
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -287,7 +295,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="imports">Imports</h2>
 <p>In Observable, you can import anything. Whether it is a chart, function, data, input, etc. I will show you a few examples here and give you further reading if you want to get into the details.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-startfrom="41" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 40;"><span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> streamgraph} <span class="im">from</span> <span class="st">"@d3/streamgraph-transitions"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="41" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 40;"><span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> streamgraph} <span class="im">from</span> <span class="st">"@d3/streamgraph-transitions"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -296,7 +304,7 @@ cookieconsent.run({
 </div>
 <p>The cell above imports a chart from a notebook in the <a href="https://observablehq.com/@d3/gallery">D3 Gallery</a>. It was created by Mike Bostock as an example of what you can do with D3 transitions. Here I am using it as an example of how easy it is to import things. In the cell below all I had to do was type <code>streamgraph</code> and voila.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-startfrom="47" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 46;"><span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>streamgraph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="47" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 46;"><span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>streamgraph</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -305,7 +313,7 @@ cookieconsent.run({
 </div>
 <p>If we wanted to import a map and a drop down menu from another notebook. We could do that too. This drop down menu (input) selects different map projections. Check it out! It is also interactive. Use your mouse to click and drag to explore.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-startfrom="53" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 52;"><span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> map<span class="op">,</span> viewof projectionName} <span class="im">from</span> <span class="st">"@d3/versor-dragging"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="53" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 52;"><span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> map<span class="op">,</span> viewof projection} <span class="im">from</span> <span class="st">"@d3/versor-dragging"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -313,7 +321,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>viewof projectionName</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="57" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>viewof projection</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="expression">
 
@@ -321,7 +329,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="61" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>map</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="61" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>map</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="expression">
 
@@ -330,9 +338,9 @@ cookieconsent.run({
 </div>
 <p>Below I imported an example dataset and some functions to add my own twist to the chart. Mike Freeman created some add-on functions for Observable Plot that enable you to both customize the tooltips and animation. So I over engineered this faceted scatter plot to animate the dots and when you hover over the dot it shows both a tooltip and enlarges the dot.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="68" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 67;"><span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {barley} <span class="im">from</span> <span class="st">"@observablehq/plot-facets"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-startfrom="68" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 67;"><span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {barley} <span class="im">from</span> <span class="st">"@observablehq/plot-facets"</span></span>
 <span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {addTooltips} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span>
-<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {addAnimation} <span class="im">from</span> <span class="st">"@mkfreeman/plot-animation"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {addAnimation} <span class="im">from</span> <span class="st">"@mkfreeman/plot-animation"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-6-1" data-nodetype="declaration">
@@ -356,7 +364,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-startfrom="73" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a><span class="fu">visibility</span>()<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-startfrom="73" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a><span class="fu">visibility</span>()<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span></span>
 <span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a><span class="fu">addAnimation</span>(<span class="fu">addTooltips</span>(Plot<span class="op">.</span><span class="fu">plot</span>({ <span class="co">// I just added these wrappers to the beginning and</span></span>
 <span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
 <span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">110</span><span class="op">,</span></span>
@@ -385,7 +393,7 @@ cookieconsent.run({
 <span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(barley<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"yield"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"variety"</span><span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> </span>
 <span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>      <span class="vs">`Yield: </span><span class="sc">${</span><span class="pp">parseFloat</span>((d<span class="op">.</span><span class="at">yield</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>))<span class="sc">}</span><span class="vs">  </span><span class="sc">\n</span><span class="vs"> Variety: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">variety</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> Year: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">year</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> Site:</span><span class="sc">${</span>d<span class="op">.</span><span class="at">site</span><span class="sc">}</span><span class="vs">`</span>}) <span class="co">// this line for the tooltip titles and</span></span>
 <span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>  ] <span class="co">// this line on the end to add animation and enlarge the dots on hover</span></span>
-<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>})<span class="op">,</span> {<span class="dt">r</span><span class="op">:</span><span class="dv">15</span>})<span class="op">,</span> {<span class="dt">type</span><span class="op">:</span> <span class="st">"circle"</span><span class="op">,</span> <span class="dt">attribute</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">endValue</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">delay</span><span class="op">:</span> <span class="dv">100</span>} ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>})<span class="op">,</span> {<span class="dt">r</span><span class="op">:</span><span class="dv">15</span>})<span class="op">,</span> {<span class="dt">type</span><span class="op">:</span> <span class="st">"circle"</span><span class="op">,</span> <span class="dt">attribute</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">endValue</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">delay</span><span class="op">:</span> <span class="dv">100</span>} ))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="expression">
 
@@ -394,7 +402,7 @@ cookieconsent.run({
 </div>
 <p>But wait that is not all that you can do! You can also modify your imported charts with your own or somebody else’s data. Here is an example of using a Bar Chart Race with the data from the original notebook.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-startfrom="108" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 107;"><span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> barChartRace<span class="op">,</span> viewof replay} <span class="im">from</span> <span class="st">"@d3/bar-chart-race"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" data-startfrom="108" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 107;"><span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> barChartRace<span class="op">,</span> viewof replay} <span class="im">from</span> <span class="st">"@d3/bar-chart-race"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="declaration">
 
@@ -402,7 +410,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-startfrom="112" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 111;"><span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>viewof replay</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" data-startfrom="112" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 111;"><span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>viewof replay</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="expression">
 
@@ -410,7 +418,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-startfrom="116" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 115;"><span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>barChartRace</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" data-startfrom="116" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 115;"><span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>barChartRace</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-10" data-nodetype="expression">
 
@@ -419,8 +427,8 @@ cookieconsent.run({
 </div>
 <p>So above is what it would look like if I didn’t change the data. Below is what it looks like after I import different data. This data comes from Emil Hvitfeldt’s notebook where he uploaded a csv file of R package downloads over time. I could have also uploaded my own csv file, it just has to match the format of the data for the imported chart.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-startfrom="123" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 122;"><span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {data <span class="im">as</span> rPackages} <span class="im">from</span> <span class="st">"@emilhvitfeldt/race-for-most-downloaded-r-package"</span></span>
-<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> rRace<span class="op">,</span> viewof replay <span class="im">as</span> replay2} <span class="cf">with</span> {rPackages <span class="im">as</span> data} <span class="im">from</span> <span class="st">"@d3/bar-chart-race"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" data-startfrom="123" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 122;"><span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {data <span class="im">as</span> rPackages} <span class="im">from</span> <span class="st">"@emilhvitfeldt/race-for-most-downloaded-r-package"</span></span>
+<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> rRace<span class="op">,</span> viewof replay <span class="im">as</span> replay2} <span class="cf">with</span> {rPackages <span class="im">as</span> data} <span class="im">from</span> <span class="st">"@d3/bar-chart-race"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-11-1" data-nodetype="declaration">
@@ -437,7 +445,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-startfrom="127" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 126;"><span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>viewof replay2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" data-startfrom="127" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 126;"><span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>viewof replay2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="expression">
 
@@ -445,7 +453,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" data-startfrom="131" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 130;"><span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>rRace</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-startfrom="131" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 130;"><span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>rRace</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-13" data-nodetype="expression">
 
@@ -459,7 +467,7 @@ cookieconsent.run({
 <p>Observable has some built-in libraries to help with user <a href="https://observablehq.com/@observablehq/inputs">inputs</a>. It leverages <a href="https://observablehq.com/@observablehq/introduction-to-views">views</a> which is a clever and way less confusing way to handle interactions and their outputs on the web.</p>
 <p>In the cell below I gave a range of values <code>0 to 25</code>, I gave a starting value <code>value: 10</code> and I gave an interval to step between values in our range <code>step: 1</code> and then I just named it <code>r</code> so we can reference it later. In Observable notebooks, <code>viewof</code> creates reactive variables of inputs so if I just do the following below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" data-startfrom="143" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 142;"><span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>viewof r <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">25</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" data-startfrom="143" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 142;"><span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>viewof r <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">25</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-14" data-nodetype="declaration">
 
@@ -467,7 +475,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-startfrom="147" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 146;"><span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a>r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-startfrom="147" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 146;"><span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a>r</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="expression">
 
@@ -476,7 +484,7 @@ cookieconsent.run({
 </div>
 <p>It updates when we move the slider. This works both in JavaScript and in Markdown here is the number: <span><span id="ojs-element-id-1"></span>.</span> This <code>r</code> variable can be plugged into anything we want. Lets add some color and data to make a chart.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-startfrom="153" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 152;"><span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {penguins} <span class="im">from</span> <span class="st">"@enjalot/palmer-penguins"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-startfrom="153" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 152;"><span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {penguins} <span class="im">from</span> <span class="st">"@enjalot/palmer-penguins"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-16" data-nodetype="declaration">
 
@@ -484,7 +492,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-startfrom="157" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 156;"><span id="cb17-157"><a href="#cb17-157" aria-hidden="true" tabindex="-1"></a>viewof color <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>([<span class="st">"red"</span><span class="op">,</span> <span class="st">"green"</span><span class="op">,</span> <span class="st">"blue"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"red"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-startfrom="157" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 156;"><span id="cb17-157"><a href="#cb17-157" aria-hidden="true" tabindex="-1"></a>viewof color <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>([<span class="st">"red"</span><span class="op">,</span> <span class="st">"green"</span><span class="op">,</span> <span class="st">"blue"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"red"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-17" data-nodetype="declaration">
 
@@ -493,7 +501,7 @@ cookieconsent.run({
 </div>
 <p>I reused the <code>addTootips</code> function I imported earlier and added the two reactive input variables we just created <code>r</code> and <code>color</code>. These two variables control the attributes when you hover over the dots in this visualization. Go ahead and change the fill color and size of the dots with the inputs above.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" data-startfrom="163" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 162;"><span id="cb18-163"><a href="#cb18-163" aria-hidden="true" tabindex="-1"></a><span class="fu">addTooltips</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-startfrom="163" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 162;"><span id="cb18-163"><a href="#cb18-163" aria-hidden="true" tabindex="-1"></a><span class="fu">addTooltips</span>(</span>
 <span id="cb18-164"><a href="#cb18-164" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb18-165"><a href="#cb18-165" aria-hidden="true" tabindex="-1"></a>  <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
 <span id="cb18-166"><a href="#cb18-166" aria-hidden="true" tabindex="-1"></a>  <span class="dt">facet</span><span class="op">:</span> {</span>
@@ -507,7 +515,7 @@ cookieconsent.run({
 <span id="cb18-174"><a href="#cb18-174" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">frame</span>()<span class="op">,</span></span>
 <span id="cb18-175"><a href="#cb18-175" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(penguins<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"flipper_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"island"</span><span class="op">,</span> <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span></span>
 <span id="cb18-176"><a href="#cb18-176" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">species</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs"> flipper length: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">flipper_length_mm</span><span class="sc">}</span><span class="vs"> mm </span><span class="sc">\n</span><span class="vs"> body mass: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">body_mass_g</span><span class="sc">}</span><span class="vs"> g`</span>})</span>
-<span id="cb18-177"><a href="#cb18-177" aria-hidden="true" tabindex="-1"></a>  ]})<span class="op">,</span> {<span class="dt">r</span><span class="op">:</span> r<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> color}) <span class="co">//This is where the reactivity is happening</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-177"><a href="#cb18-177" aria-hidden="true" tabindex="-1"></a>  ]})<span class="op">,</span> {<span class="dt">r</span><span class="op">:</span> r<span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> color}) <span class="co">//This is where the reactivity is happening</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-18" data-nodetype="expression">
 
@@ -516,13 +524,13 @@ cookieconsent.run({
 </div>
 <p>This also makes interacting with data very easy. Here are some NBA team names with their location.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-startfrom="183" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 182;"><span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a>teams <span class="op">=</span> [</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" data-startfrom="183" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 182;"><span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a>teams <span class="op">=</span> [</span>
 <span id="cb19-184"><a href="#cb19-184" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">name</span><span class="op">:</span> <span class="st">"Lakers"</span><span class="op">,</span> <span class="dt">location</span><span class="op">:</span> <span class="st">"Los Angeles, California"</span>}<span class="op">,</span></span>
 <span id="cb19-185"><a href="#cb19-185" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">name</span><span class="op">:</span> <span class="st">"Warriors"</span><span class="op">,</span> <span class="dt">location</span><span class="op">:</span> <span class="st">"San Francisco, California"</span>}<span class="op">,</span></span>
 <span id="cb19-186"><a href="#cb19-186" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">name</span><span class="op">:</span> <span class="st">"Celtics"</span><span class="op">,</span> <span class="dt">location</span><span class="op">:</span> <span class="st">"Boston, Massachusetts"</span>}<span class="op">,</span></span>
 <span id="cb19-187"><a href="#cb19-187" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">name</span><span class="op">:</span> <span class="st">"Nets"</span><span class="op">,</span> <span class="dt">location</span><span class="op">:</span> <span class="st">"New York City, New York"</span>}<span class="op">,</span></span>
 <span id="cb19-188"><a href="#cb19-188" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">name</span><span class="op">:</span> <span class="st">"Raptors"</span><span class="op">,</span> <span class="dt">location</span><span class="op">:</span> <span class="st">"Toronto, Ontario"</span>}<span class="op">,</span></span>
-<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-19" data-nodetype="declaration">
 
@@ -530,7 +538,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-startfrom="193" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 192;"><span id="cb20-193"><a href="#cb20-193" aria-hidden="true" tabindex="-1"></a>viewof favorite <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(teams<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> teams[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Favorite team"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">name</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" data-startfrom="193" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 192;"><span id="cb20-193"><a href="#cb20-193" aria-hidden="true" tabindex="-1"></a>viewof favorite <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(teams<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> teams[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Favorite team"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> x <span class="kw">=&gt;</span> x<span class="op">.</span><span class="at">name</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-20" data-nodetype="declaration">
 
@@ -539,7 +547,7 @@ cookieconsent.run({
 </div>
 <p>So the cell above creates our input. It takes the <code>teams</code> dataset and uses the first variable in the array as its starting value <code>value: teams[0]</code>. The format option specifies how you want to present the value to the reader.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-startfrom="199" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 198;"><span id="cb21-199"><a href="#cb21-199" aria-hidden="true" tabindex="-1"></a>favorite<span class="op">.</span><span class="at">location</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" data-startfrom="199" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 198;"><span id="cb21-199"><a href="#cb21-199" aria-hidden="true" tabindex="-1"></a>favorite<span class="op">.</span><span class="at">location</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-21" data-nodetype="expression">
 
@@ -549,10 +557,10 @@ cookieconsent.run({
 <p>The name of the reactive input variable is <code>favorite</code> and we can access whichever variable in the dataset by putting a <code>.</code> and then the name of that variable. In this case it is <code>location</code>. To show the location of the team you can use the <code>${favorite.location}</code> in the markdown. Try clicking on the radio buttons to see the different locations: <span><span id="ojs-element-id-2"></span>.</span> This way of writing in markdown is valuable when you want to create data driven documents. No need to edit your values manually in word documents anymore.</p>
 <p>Below is an example of filtering a dataset (I am reusing the penguins dataset here). Click on the options below and see how the data changes when you select different options.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22" data-startfrom="207" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 206;"><span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a>viewof checkbox <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" data-startfrom="207" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 206;"><span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a>viewof checkbox <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
 <span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">group</span>(penguins<span class="op">,</span> (d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">island</span>)<span class="op">,</span></span>
 <span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">key</span><span class="op">:</span> [<span class="st">"Dream"</span><span class="op">,</span> <span class="st">"Torgersen"</span>]}</span>
-<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-22" data-nodetype="declaration">
 
@@ -560,7 +568,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" data-startfrom="214" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 213;"><span id="cb23-214"><a href="#cb23-214" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> checkbox<span class="op">.</span><span class="fu">flat</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" data-startfrom="214" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 213;"><span id="cb23-214"><a href="#cb23-214" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> checkbox<span class="op">.</span><span class="fu">flat</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-23" data-nodetype="declaration">
 
@@ -568,7 +576,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24" data-startfrom="218" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 217;"><span id="cb24-218"><a href="#cb24-218" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"flipper_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"island"</span>})<span class="op">.</span><span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24" data-startfrom="218" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 217;"><span id="cb24-218"><a href="#cb24-218" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"flipper_length_mm"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"island"</span>})<span class="op">.</span><span class="fu">plot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-24" data-nodetype="expression">
 
@@ -590,81 +598,141 @@ cookieconsent.run({
 
 <!-- -->
 
+<div class="ojs-auto-generated hidden">
 <script type="ojs-module-contents">
-{"contents":[
-  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${r}</span>`", "cellName":"ojs-element-id-1"}
-,
-  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${favorite.location}</span>`", "cellName":"ojs-element-id-2"}
-]}
+eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7cn08L3NwYW4+YCIsICJjZWxsTmFtZSI6Im9qcy1lbGVtZW50LWlkLTEifSwgIHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImlubGluZSI6InRydWUiLCJzb3VyY2UiOiJodGwuaHRtbGA8c3Bhbj4ke2Zhdm9yaXRlLmxvY2F0aW9ufTwvc3Bhbj5gIiwgImNlbGxOYW1lIjoib2pzLWVsZW1lbnQtaWQtMiJ9XX0=
 </script>
+</div>
 </section>
 
 </main> <!-- /main -->
 <!-- Begin Mailchimp Signup Form -->
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
 <style type="text/css">
+
 #mc_embed_signup{background:#fff; clear:left; font-family: "Karma", sans-serif;  width:300px;}
+
 .center {
+
         display: flex;
+
         justify-content: center;
+
         align-items: center;
+
         margin: 0 auto;
+
         text-align: center;
+
     }
+
 #mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%}
+
 #mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
+
 #mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+
 #mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+
 #mc_embed_signup input:focus {border-color:#333;}
+
 #mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; transition: all 0.23s ease-in-out 0s; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: normal; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: fit-content; width: -moz-fit-content;}
+
 #mc_embed_signup .button:hover {background-color:#777;}
+
 #mc_embed_signup .small-meta {font-size: 11px;}
+
 #mc_embed_signup .nowrap {white-space:nowrap;}     
+
 #mc_embed_signup .clear {clear:none; display:inline;}
+
 #mc_embed_signup .foot {display:grid; grid-template-columns: 3fr 1fr; align-items: center; width:97%;}
+
 @media screen and (max-width:400px) {#mc_embed_signup .foot {display:grid; grid-template-columns: 1fr; align-items: center;}}
+
+
 
 @media screen and (max-width:400px) {#mc_embed_signup .referralBadge {width:50%;}}
 
+
+
 #mc_embed_signup .brandingLogo {justify-self:right;}
+
 @media screen and (max-width:400px) {#mc_embed_signup .brandingLogo {justify-self:left;}}
 
+
+
 #mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+
 #mc_embed_signup input.email {font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; display:block; padding:0 0.4em; min-height:32px; width:96%; min-width:130px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 
+
+
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+
 #mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+
 #mc_embed_signup #mce-error-response {display:none;}
+
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
+
 #mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
 </style>
+
 <div class="center">
+
 <div id="mc_embed_signup">
+
     <form action="https://thegilpatrick.us11.list-manage.com/subscribe/post?u=eaf112d4f57b3ee0225c5ffcb&amp;id=01d72b9a9c&amp;f_id=00629ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
         <div id="mc_embed_signup_scroll">
+
 <div class="center mc-field-group">
+
 	<input type="email" placeholder="Your Email Address" name="EMAIL" class="required email" id="mce-EMAIL" required=""><input style="margin-top: 10px;" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+
 </div>
+
 	<div id="mce-responses" class="clear foot">
+
 		<div class="center response" id="mce-error-response" style="display:none"></div>
+
 		<div class="center response" id="mce-success-response" style="display:none"></div>
+
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_eaf112d4f57b3ee0225c5ffcb_01d72b9a9c" tabindex="-1" value=""></div>
+
         <div class="optionalParent">
+
             <div class="clear foot">
+
                 
+
                 
+
             </div>
+
         </div>
+
     </div>
+
 </form>
+
 </div>
+
 </div>
+
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 <!--End mc_embed_signup-->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"import {chart as streamgraph} from \"@d3/streamgraph-transitions\"\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"streamgraph\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"import {chart as map, viewof projectionName} from \"@d3/versor-dragging\"\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"viewof projectionName\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"map\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"import {barley} from \"@observablehq/plot-facets\"\nimport {addTooltips} from \"@mkfreeman/plot-tooltip\"\nimport {addAnimation} from \"@mkfreeman/plot-animation\"\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"visibility().then(() =>\naddAnimation(addTooltips(Plot.plot({ // I just added these wrappers to the beginning and\n  marginTop: 50,\n  marginLeft: 110,\n  height: 800,\n  grid: true,\n  x: {\n    nice: true\n  },\n  y: {\n    domain: d3.groupSort(barley, g => -d3.median(g, d => d.yield), d => d.variety),\n    inset: 5\n  },\n  fy: {\n    domain: d3.groupSort(barley, g => -d3.median(g, d => d.yield), d => d.site)\n  },\n  color: {\n    type: \"categorical\"\n  },\n  facet: {\n    data: barley,\n    y: \"site\",\n    marginRight: 90\n  },\n  marks: [\n    Plot.frame(),\n    Plot.dot(barley, {x: \"yield\", y: \"variety\", r: 0, stroke: \"year\", title: (d) => \n      `Yield: ${parseFloat((d.yield).toFixed(1))}  \\n Variety: ${d.variety} \\n Year: ${d.year} \\n Site:${d.site}`}) // this line for the tooltip titles and\n  ] // this line on the end to add animation and enlarge the dots on hover\n}), {r:15}), {type: \"circle\", attribute: \"r\", endValue: 3, delay: 100} )) \n"},{"methodName":"interpret","cellName":"ojs-cell-8","inline":false,"source":"import {chart as barChartRace, viewof replay} from \"@d3/bar-chart-race\"\n"},{"methodName":"interpret","cellName":"ojs-cell-9","inline":false,"source":"viewof replay\n"},{"methodName":"interpret","cellName":"ojs-cell-10","inline":false,"source":"barChartRace\n"},{"methodName":"interpret","cellName":"ojs-cell-11","inline":false,"source":"import {data as rPackages} from \"@emilhvitfeldt/race-for-most-downloaded-r-package\"\nimport {chart as rRace, viewof replay as replay2} with {rPackages as data} from \"@d3/bar-chart-race\"\n"},{"methodName":"interpret","cellName":"ojs-cell-12","inline":false,"source":"viewof replay2\n"},{"methodName":"interpret","cellName":"ojs-cell-13","inline":false,"source":"rRace\n"},{"methodName":"interpret","cellName":"ojs-cell-14","inline":false,"source":"viewof r = Inputs.range([0, 25], {value: 10, step: 1})\n"},{"methodName":"interpret","cellName":"ojs-cell-15","inline":false,"source":"r\n"},{"methodName":"interpret","cellName":"ojs-cell-16","inline":false,"source":"import {penguins} from \"@enjalot/palmer-penguins\"\n"},{"methodName":"interpret","cellName":"ojs-cell-17","inline":false,"source":"viewof color = Inputs.radio([\"red\", \"green\", \"blue\"], {value: \"red\"})\n"},{"methodName":"interpret","cellName":"ojs-cell-18","inline":false,"source":"addTooltips(\nPlot.plot({\n  grid: true,\n  facet: {\n    data: penguins,\n    x: \"sex\",\n    y: \"species\",\n    marginTop: 50,\n    marginRight: 80\n  },\n  marks : [\n    Plot.frame(),\n    Plot.dot(penguins, {x: \"flipper_length_mm\", y: \"body_mass_g\", stroke: \"island\", title: (d) =>\n        `${d.species} \\n flipper length: ${d.flipper_length_mm} mm \\n body mass: ${d.body_mass_g} g`})\n  ]}), {r: r, fill: color}) //This is where the reactivity is happening\n"},{"methodName":"interpret","cellName":"ojs-cell-19","inline":false,"source":"teams = [\n  {name: \"Lakers\", location: \"Los Angeles, California\"},\n  {name: \"Warriors\", location: \"San Francisco, California\"},\n  {name: \"Celtics\", location: \"Boston, Massachusetts\"},\n  {name: \"Nets\", location: \"New York City, New York\"},\n  {name: \"Raptors\", location: \"Toronto, Ontario\"},\n]\n"},{"methodName":"interpret","cellName":"ojs-cell-20","inline":false,"source":"viewof favorite = Inputs.radio(teams, {value: teams[0], label: \"Favorite team\", format: x => x.name})\n"},{"methodName":"interpret","cellName":"ojs-cell-21","inline":false,"source":"favorite.location\n"},{"methodName":"interpret","cellName":"ojs-cell-22","inline":false,"source":"viewof checkbox = Inputs.checkbox(\n  d3.group(penguins, (d) => d.island),\n  { key: [\"Dream\", \"Torgersen\"]}\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-23","inline":false,"source":"filtered = checkbox.flat()\n"},{"methodName":"interpret","cellName":"ojs-cell-24","inline":false,"source":"Plot.dot(filtered, {x: \"flipper_length_mm\", y: \"body_mass_g\", stroke: \"island\"}).plot()\n"},{"methodName":"interpretQuiet","source":"shinyInput('r')"},{"methodName":"interpretQuiet","source":"shinyInput('color')"},{"methodName":"interpretQuiet","source":"shinyInput('favorite')"},{"methodName":"interpretQuiet","source":"shinyInput('checkbox')"}]}
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7Y2hhcnQgYXMgc3RyZWFtZ3JhcGh9IGZyb20gXCJAZDMvc3RyZWFtZ3JhcGgtdHJhbnNpdGlvbnNcIlxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoic3RyZWFtZ3JhcGhcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7Y2hhcnQgYXMgbWFwLCB2aWV3b2YgcHJvamVjdGlvbn0gZnJvbSBcIkBkMy92ZXJzb3ItZHJhZ2dpbmdcIlxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHByb2plY3Rpb25cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1hcFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHtiYXJsZXl9IGZyb20gXCJAb2JzZXJ2YWJsZWhxL3Bsb3QtZmFjZXRzXCJcbmltcG9ydCB7YWRkVG9vbHRpcHN9IGZyb20gXCJAbWtmcmVlbWFuL3Bsb3QtdG9vbHRpcFwiXG5pbXBvcnQge2FkZEFuaW1hdGlvbn0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC1hbmltYXRpb25cIlxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlzaWJpbGl0eSgpLnRoZW4oKCkgPT5cbmFkZEFuaW1hdGlvbihhZGRUb29sdGlwcyhQbG90LnBsb3QoeyAvLyBJIGp1c3QgYWRkZWQgdGhlc2Ugd3JhcHBlcnMgdG8gdGhlIGJlZ2lubmluZyBhbmRcbiAgbWFyZ2luVG9wOiA1MCxcbiAgbWFyZ2luTGVmdDogMTEwLFxuICBoZWlnaHQ6IDgwMCxcbiAgZ3JpZDogdHJ1ZSxcbiAgeDoge1xuICAgIG5pY2U6IHRydWVcbiAgfSxcbiAgeToge1xuICAgIGRvbWFpbjogZDMuZ3JvdXBTb3J0KGJhcmxleSwgZyA9PiAtZDMubWVkaWFuKGcsIGQgPT4gZC55aWVsZCksIGQgPT4gZC52YXJpZXR5KSxcbiAgICBpbnNldDogNVxuICB9LFxuICBmeToge1xuICAgIGRvbWFpbjogZDMuZ3JvdXBTb3J0KGJhcmxleSwgZyA9PiAtZDMubWVkaWFuKGcsIGQgPT4gZC55aWVsZCksIGQgPT4gZC5zaXRlKVxuICB9LFxuICBjb2xvcjoge1xuICAgIHR5cGU6IFwiY2F0ZWdvcmljYWxcIlxuICB9LFxuICBmYWNldDoge1xuICAgIGRhdGE6IGJhcmxleSxcbiAgICB5OiBcInNpdGVcIixcbiAgICBtYXJnaW5SaWdodDogOTBcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmZyYW1lKCksXG4gICAgUGxvdC5kb3QoYmFybGV5LCB7eDogXCJ5aWVsZFwiLCB5OiBcInZhcmlldHlcIiwgcjogMCwgc3Ryb2tlOiBcInllYXJcIiwgdGl0bGU6IChkKSA9PiBcbiAgICAgIGBZaWVsZDogJHtwYXJzZUZsb2F0KChkLnlpZWxkKS50b0ZpeGVkKDEpKX0gIFxcbiBWYXJpZXR5OiAke2QudmFyaWV0eX0gXFxuIFllYXI6ICR7ZC55ZWFyfSBcXG4gU2l0ZToke2Quc2l0ZX1gfSkgLy8gdGhpcyBsaW5lIGZvciB0aGUgdG9vbHRpcCB0aXRsZXMgYW5kXG4gIF0gLy8gdGhpcyBsaW5lIG9uIHRoZSBlbmQgdG8gYWRkIGFuaW1hdGlvbiBhbmQgZW5sYXJnZSB0aGUgZG90cyBvbiBob3ZlclxufSksIHtyOjE1fSksIHt0eXBlOiBcImNpcmNsZVwiLCBhdHRyaWJ1dGU6IFwiclwiLCBlbmRWYWx1ZTogMywgZGVsYXk6IDEwMH0gKSkgXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTgiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQge2NoYXJ0IGFzIGJhckNoYXJ0UmFjZSwgdmlld29mIHJlcGxheX0gZnJvbSBcIkBkMy9iYXItY2hhcnQtcmFjZVwiXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgcmVwbGF5XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiYmFyQ2hhcnRSYWNlXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiaW1wb3J0IHtkYXRhIGFzIHJQYWNrYWdlc30gZnJvbSBcIkBlbWlsaHZpdGZlbGR0L3JhY2UtZm9yLW1vc3QtZG93bmxvYWRlZC1yLXBhY2thZ2VcIlxuaW1wb3J0IHtjaGFydCBhcyByUmFjZSwgdmlld29mIHJlcGxheSBhcyByZXBsYXkyfSB3aXRoIHtyUGFja2FnZXMgYXMgZGF0YX0gZnJvbSBcIkBkMy9iYXItY2hhcnQtcmFjZVwiXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTEyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHJlcGxheTJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJyUmFjZVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiByID0gSW5wdXRzLnJhbmdlKFswLCAyNV0sIHt2YWx1ZTogMTAsIHN0ZXA6IDF9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQge3Blbmd1aW5zfSBmcm9tIFwiQGVuamFsb3QvcGFsbWVyLXBlbmd1aW5zXCJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgY29sb3IgPSBJbnB1dHMucmFkaW8oW1wicmVkXCIsIFwiZ3JlZW5cIiwgXCJibHVlXCJdLCB7dmFsdWU6IFwicmVkXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImFkZFRvb2x0aXBzKFxuUGxvdC5wbG90KHtcbiAgZ3JpZDogdHJ1ZSxcbiAgZmFjZXQ6IHtcbiAgICBkYXRhOiBwZW5ndWlucyxcbiAgICB4OiBcInNleFwiLFxuICAgIHk6IFwic3BlY2llc1wiLFxuICAgIG1hcmdpblRvcDogNTAsXG4gICAgbWFyZ2luUmlnaHQ6IDgwXG4gIH0sXG4gIG1hcmtzIDogW1xuICAgIFBsb3QuZnJhbWUoKSxcbiAgICBQbG90LmRvdChwZW5ndWlucywge3g6IFwiZmxpcHBlcl9sZW5ndGhfbW1cIiwgeTogXCJib2R5X21hc3NfZ1wiLCBzdHJva2U6IFwiaXNsYW5kXCIsIHRpdGxlOiAoZCkgPT5cbiAgICAgICAgYCR7ZC5zcGVjaWVzfSBcXG4gZmxpcHBlciBsZW5ndGg6ICR7ZC5mbGlwcGVyX2xlbmd0aF9tbX0gbW0gXFxuIGJvZHkgbWFzczogJHtkLmJvZHlfbWFzc19nfSBnYH0pXG4gIF19KSwge3I6IHIsIGZpbGw6IGNvbG9yfSkgLy9UaGlzIGlzIHdoZXJlIHRoZSByZWFjdGl2aXR5IGlzIGhhcHBlbmluZ1xuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xOSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRlYW1zID0gW1xuICB7bmFtZTogXCJMYWtlcnNcIiwgbG9jYXRpb246IFwiTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWFcIn0sXG4gIHtuYW1lOiBcIldhcnJpb3JzXCIsIGxvY2F0aW9uOiBcIlNhbiBGcmFuY2lzY28sIENhbGlmb3JuaWFcIn0sXG4gIHtuYW1lOiBcIkNlbHRpY3NcIiwgbG9jYXRpb246IFwiQm9zdG9uLCBNYXNzYWNodXNldHRzXCJ9LFxuICB7bmFtZTogXCJOZXRzXCIsIGxvY2F0aW9uOiBcIk5ldyBZb3JrIENpdHksIE5ldyBZb3JrXCJ9LFxuICB7bmFtZTogXCJSYXB0b3JzXCIsIGxvY2F0aW9uOiBcIlRvcm9udG8sIE9udGFyaW9cIn0sXG5dXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIwIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGZhdm9yaXRlID0gSW5wdXRzLnJhZGlvKHRlYW1zLCB7dmFsdWU6IHRlYW1zWzBdLCBsYWJlbDogXCJGYXZvcml0ZSB0ZWFtXCIsIGZvcm1hdDogeCA9PiB4Lm5hbWV9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZhdm9yaXRlLmxvY2F0aW9uXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIyIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGNoZWNrYm94ID0gSW5wdXRzLmNoZWNrYm94KFxuICBkMy5ncm91cChwZW5ndWlucywgKGQpID0+IGQuaXNsYW5kKSxcbiAgeyBrZXk6IFtcIkRyZWFtXCIsIFwiVG9yZ2Vyc2VuXCJdfVxuKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZpbHRlcmVkID0gY2hlY2tib3guZmxhdCgpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTI0IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5kb3QoZmlsdGVyZWQsIHt4OiBcImZsaXBwZXJfbGVuZ3RoX21tXCIsIHk6IFwiYm9keV9tYXNzX2dcIiwgc3Ryb2tlOiBcImlzbGFuZFwifSkucGxvdCgpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3InKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY29sb3InKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZmF2b3JpdGUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY2hlY2tib3gnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -675,43 +743,58 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -719,309 +802,398 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        return container.innerHTML
-      } else {
-        return note.innerHTML;
-      }
-    } else {
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
-        }
-      } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
-          if (note !== null) {
-            const html = processXRef(id, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
           } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+            window.location.href = sourceUrl;
           }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
       });
     }
-  }
-});
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb25" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/thegilpatrick\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Hello, Observable!</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Scott Franz</span></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 5/21/2022</span></span>
@@ -1053,7 +1225,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>So I know notebooks are not for everyone, but I think they are a great resource for learning (which for me is half the fun of programming). I started using Observable, about two years ago because of this Vega-Lite tutorial (pictured below) by Jeffrey Heer at the University of Washington.</span>
 <span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://observablehq.com/@uwdata/introduction-to-vega-lite"</span><span class="kw">&gt;</span> <span class="kw">&lt;img</span> <span class="er">width</span><span class="ot">=</span><span class="st">"100%"</span> <span class="er">title</span><span class="ot">=</span><span class="st">"Vega-Lite Example Gallery"</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://raw.githubusercontent.com/vega/vega-lite/next/site/static/teaser.png"</span><span class="kw">&gt;&lt;/a&gt;</span></span>
+<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://observablehq.com/@uwdata/introduction-to-vega-lite"</span><span class="dt">&gt;</span> <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"Vega-Lite Example Gallery"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://raw.githubusercontent.com/vega/vega-lite/next/site/static/teaser.png"</span><span class="dt">&gt;&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>This was the start of the adventure for me. After learning the basics I was hooked. I learned more about what Observable itself is capable of doing. They have a great <span class="co">[</span><span class="ot">YouTube channel</span><span class="co">](https://www.youtube.com/c/Observablehq)</span> with plenty of live-streams and tutorials. They also have notebook tutorials on <span class="co">[</span><span class="ot">D3</span><span class="co">](https://observablehq.com/collection/@d3/learn-d3)</span>, their new <span class="co">[</span><span class="ot">Observable Plot</span><span class="co">](https://observablehq.com/collection/@observablehq/plot)</span>, and <span class="co">[</span><span class="ot">how to analyze time series data</span><span class="co">](https://observablehq.com/collection/@observablehq/analyzing-time-series-data)</span>. There are plenty of other contributors too. These two tutorials on D3: <span class="co">[</span><span class="ot">Tyler Wolf's 25 Days of D3</span><span class="co">](https://observablehq.com/collection/@thetylerwolf/25-days-of-d3)</span> and <span class="co">[</span><span class="ot">NYU Visualization's Guides/Examples</span><span class="co">](https://observablehq.com/collection/@nyuvis/guides-and-examples)</span>, were both very helpful. I find the community encouraging. The ability to interact with the code and fork other user's notebooks has been a huge bonus. I regularly find interesting notebooks where I import a part to use for my own work. <span class="co">[</span><span class="ot">Mike Freeman</span><span class="co">](https://observablehq.com/@mkfreeman)</span>, <span class="co">[</span><span class="ot">Philippe Rivière</span><span class="co">](https://observablehq.com/@fil)</span>, <span class="co">[</span><span class="ot">Ian Johnson</span><span class="co">](https://observablehq.com/@enjalot)</span>, and of course <span class="co">[</span><span class="ot">Mike Bostock</span><span class="co">](https://observablehq.com/@mbostock)</span> have been integral to my learning. </span>
 <span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a></span>
@@ -1074,11 +1246,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb25-55"><a href="#cb25-55" aria-hidden="true" tabindex="-1"></a>If we wanted to import a map and a drop down menu from another notebook. We could do that too. This drop down menu (input) selects different map projections. Check it out! It is also interactive. Use your mouse to click and drag to explore.</span>
 <span id="cb25-56"><a href="#cb25-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-59"><a href="#cb25-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> map<span class="op">,</span> viewof projectionName} <span class="im">from</span> <span class="st">"@d3/versor-dragging"</span></span>
+<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {chart <span class="im">as</span> map<span class="op">,</span> viewof projection} <span class="im">from</span> <span class="st">"@d3/versor-dragging"</span></span>
 <span id="cb25-61"><a href="#cb25-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb25-62"><a href="#cb25-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-65"><a href="#cb25-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb25-66"><a href="#cb25-66" aria-hidden="true" tabindex="-1"></a>viewof projectionName</span>
+<span id="cb25-66"><a href="#cb25-66" aria-hidden="true" tabindex="-1"></a>viewof projection</span>
 <span id="cb25-67"><a href="#cb25-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb25-68"><a href="#cb25-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-71"><a href="#cb25-71" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
@@ -1255,7 +1427,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb25-280"><a href="#cb25-280" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sharing Your Work</span></span>
 <span id="cb25-281"><a href="#cb25-281" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-282"><a href="#cb25-282" aria-hidden="true" tabindex="-1"></a>After you finish your project you can share your notebook within the Observable ecosystem or link it on social media. If you want it to live on your website there are a couple of ways to do that as well. Observable has exporting abilities, a download code option or an embed option. I usually just use the embed option. You can embed it as an iframe, or you can embed it with Observable's runtime in JavaScript. This is usually what I do, so although you are relying on Observable's runtime, you can actually customize all of the styling within your own environment. If you choose to go the Quarto route, it is also super easy to either create a stand alone html file or a whole site through Quarto. You are probably looking at this notebook how Quarto rendered it, but here is the original <span class="co">[</span><span class="ot">Observable notebook</span><span class="co">](https://observablehq.com/@scottfranz/hello-observable)</span> as well. Thanks for reading this post. Please let me know if there are really cool things about Observable I missed.</span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

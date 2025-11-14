@@ -1,1 +1,1 @@
-Sitemap: https://thegilpatrick.com/sitemap.xml
+Sitemap: https://thegilpatrick.github.io/sitemap.xml

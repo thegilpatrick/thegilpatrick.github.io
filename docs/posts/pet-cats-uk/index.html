@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.176">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Scott Franz">
 <meta name="dcterms.date" content="2023-01-31">
 
-<title>UK Pet Cats</title>
+<title>UK Pet Cats – The Gilpatrick</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,6 +23,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -69,27 +70,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../thegilpatricklogo.png" rel="icon" type="image/png">
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-db5470f6d8c306a9f3e34f18d935485a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -98,6 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -138,67 +143,68 @@ cookieconsent.run({
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="UK Pet Cats">
 <meta property="og:description" content="A Tidy Tuesday visualization of UK pet cats.">
-<meta property="og:image" content="https://thegilpatrick.com/posts/pet-cats-uk/cats.png">
+<meta property="og:image" content="https://thegilpatrick.github.io/posts/pet-cats-uk/cats.png">
 <meta property="og:site_name" content="The Gilpatrick">
 <meta property="og:image:height" content="347">
 <meta property="og:image:width" content="567">
 <meta property="og:image:alt" content="Density map of UK pet cats">
 <meta name="twitter:title" content="UK Pet Cats">
 <meta name="twitter:description" content="A Tidy Tuesday visualization of UK pet cats.">
-<meta name="twitter:image" content="https://thegilpatrick.com/posts/pet-cats-uk/cats.png">
+<meta name="twitter:image" content="https://thegilpatrick.github.io/posts/pet-cats-uk/cats.png">
 <meta name="twitter:image-height" content="347">
 <meta name="twitter:image-width" content="567">
 <meta name="twitter:image:alt" content="Density map of UK pet cats">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../thegilpatricklogo.png" alt="The Gilpatrick logo." class="navbar-logo">
+    <img src="../../thegilpatricklogo.png" alt="The Gilpatrick logo." class="navbar-logo light-content">
+    <img src="../../thegilpatricklogo.png" alt="The Gilpatrick logo." class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="https://scottfranz.github.io/"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
         <li>
-    <a class="dropdown-item" href="https://github.com/thegilpatrick/Blog" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/thegilpatrick/thegilpatrick.github.io">
  <span class="dropdown-text">Source Code</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/thegilpatrick/Blog/issues" rel="" target="">
+    <a class="dropdown-item" href="https://github.com/thegilpatrick/thegilpatrick.github.io/issues">
  <span class="dropdown-text">Report a Bug</span></a>
   </li>  
     </ul>
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -206,7 +212,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
@@ -215,13 +221,12 @@ cookieconsent.run({
   <li><a href="#data-processing" id="toc-data-processing" class="nav-link" data-scroll-target="#data-processing">Data Processing</a></li>
   <li><a href="#uk-cat-timeline" id="toc-uk-cat-timeline" class="nav-link" data-scroll-target="#uk-cat-timeline">UK Cat Timeline</a></li>
   <li><a href="#explore-your-favorite-cat" id="toc-explore-your-favorite-cat" class="nav-link" data-scroll-target="#explore-your-favorite-cat">Explore Your Favorite Cat</a></li>
-  <li><a href="#felt" id="toc-felt" class="nav-link" data-scroll-target="#felt">Felt</a></li>
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -258,12 +263,14 @@ cookieconsent.run({
   
 <div>
   <div class="abstract">
-    <div class="abstract-title">Abstract</div>
+    <div class="block-title">Abstract</div>
     A Tidy Tuesday visualization of UK pet cats.
   </div>
 </div>
 
+
 </header>
+
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
@@ -273,9 +280,9 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="data-processing">Data Processing</h2>
 <p>I decided to use Observable JS this week and imported the <a href="https://observablehq.com/@uwdata/introducing-arquero">Arquero</a> library in the spirit of being tidy. Arquero is basically dplyr for JavaScript, so if you were too annoyed or intimidated by JavaScript data wrangling methods before hopefully this gives you another excuse to try it out. I didn’t do much processing this week, just combined the <code>cats_uk.csv</code> with the <code>cats_uk_reference.csv</code>. I left in all of the outliers and didn’t compute any summary statistics. You can download my combined dataset by clicking on the button below.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" data-startfrom="26" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">"@uwdata/arquero"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="26" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">"@uwdata/arquero"</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {button} <span class="im">from</span> <span class="st">"@jeremiak/download-data-button"</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>cats_uk <span class="op">=</span> aq<span class="op">.</span><span class="fu">loadCSV</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk.csv"</span>)</span>
@@ -285,7 +292,7 @@ cookieconsent.run({
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>combine <span class="op">=</span> cats_uk<span class="op">.</span><span class="fu">join</span>(cats_uk_ref)</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> combine<span class="op">.</span><span class="fu">objects</span>()</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -336,9 +343,9 @@ cookieconsent.run({
 </div>
 </div>
 </div>
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2" data-startfrom="37" data-source-offset="-458"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 36;"><span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">button</span>(data<span class="op">,</span> <span class="st">"UK_Cats.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="37" data-source-offset="-458"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 36;"><span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">button</span>(data<span class="op">,</span> <span class="st">"UK_Cats.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -353,9 +360,9 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="uk-cat-timeline">UK Cat Timeline</h2>
 <p>First, I wanted to see how long each cat was tracked. It looked like the majority were tracked for only a week or less (except for Jessie and Macauley Mccat). If you hover over the bar for each cat with your mouse it will give you more information. In addition, I colored the cats’ bars by the number of reported hours they were indoors. But if you would prefer to group them differently try the following options.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3" data-startfrom="46" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 45;"><span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>viewof color <span class="op">=</span> {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="46" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 45;"><span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>viewof color <span class="op">=</span> {</span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> values <span class="op">=</span><span class="kw">new</span> <span class="bu">Map</span>([[<span class="st">"# of Hours Indoors"</span><span class="op">,</span> <span class="st">"hrs_indoors"</span>]<span class="op">,</span> [<span class="st">"# of Cats in Household"</span><span class="op">,</span> <span class="st">"n_cats"</span>]<span class="op">,</span> [<span class="st">"Sex"</span><span class="op">,</span> <span class="st">"animal_sex"</span>]<span class="op">,</span> [<span class="st">"Reproductive Status"</span><span class="op">,</span> <span class="st">"animal_reproductive_condition"</span>]])<span class="op">;</span></span>
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">radio</span>(values<span class="op">,</span> {</span>
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="dt">key</span><span class="op">:</span> values<span class="op">.</span><span class="fu">keys</span>()<span class="op">.</span><span class="fu">next</span>()<span class="op">.</span><span class="at">value</span></span>
@@ -396,7 +403,7 @@ cookieconsent.run({
 <span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>      <span class="dt">dx</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span></span>
 <span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>    })</span>
 <span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -425,9 +432,9 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="explore-your-favorite-cat">Explore Your Favorite Cat</h2>
 <p>This section was heavily inspired by <a href="https://observablehq.com/@observablehq/plot-density">Plot’s density mark tutorial</a> . I wanted to see each individual cat’s footprint for their respective week. You can select your favorite cat using the dropdown below. Some cats barely roamed at all, while others went all over the place. With this plot it is really easy to spot some of the outliers. You can play around with the <code>thresholds</code> and <code>bandwidth</code> of the plot as well.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4" data-startfrom="95" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 94;"><span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>viewof cat <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span>)<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span><span class="st">"Lightening Bugg"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Cat Tag"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="95" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 94;"><span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>viewof cat <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span>)<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span><span class="st">"Lightening Bugg"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Cat Tag"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span>})</span>
 <span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>viewof thresholds <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Thresholds"</span>})</span>
 <span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>viewof bandwidth <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bandwidth"</span>})</span>
 <span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
@@ -438,7 +445,7 @@ cookieconsent.run({
 <span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">density</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> bandwidth<span class="op">,</span> thresholds<span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
 <span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> })</span>
 <span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -473,9 +480,9 @@ cookieconsent.run({
 <h4 class="anchored" data-anchor-id="cats-location-in-relation-to-all-cats"><span><span id="ojs-element-id-1"></span>’s</span> Location in Relation to All Cats</h4>
 <p>Now that you found <span><span id="ojs-element-id-2"></span></span> you can see where they are relative to all of their cat peers. As you can see there were a bunch in a pretty small area. Try picking another cat and see where they end up on this density plot.</p>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5" data-startfrom="115" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 114;"><span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>density<span class="op">.</span><span class="fu">legend</span>(<span class="st">"color"</span><span class="op">,</span> {<span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Density"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="115" data-source-offset="-2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 114;"><span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>density<span class="op">.</span><span class="fu">legend</span>(<span class="st">"color"</span><span class="op">,</span> {<span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Density"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -484,9 +491,9 @@ cookieconsent.run({
 </div>
 </div>
 </div>
-<details>
+<details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6" data-startfrom="117" data-source-offset="-64"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>density <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-startfrom="117" data-source-offset="-64"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>density <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
 <span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inset</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
 <span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
 <span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
@@ -498,7 +505,7 @@ cookieconsent.run({
 <span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="dv">7</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>cat<span class="sc">}</span><span class="vs">`</span>})<span class="op">,</span></span>
 <span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">frame</span>()</span>
 <span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -508,102 +515,146 @@ cookieconsent.run({
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="felt" class="level2">
-<h2 class="anchored" data-anchor-id="felt">Felt</h2>
-<p>Last thing, I have been following Felt on twitter for a while now. I saw this <a href="https://twitter.com/felt/status/1620467130826358784?s=20&amp;t=CviOaHu67-VGvZzx11Ebrw">tweet</a> and immediately needed to try it. It was super simple to just drag and drop a .csv file and get going. Check it out! You should be able to edit this map if you create your own Felt account. Thanks for reading!</p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7" data-startfrom="136" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 135;"><span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span></span>
-<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;iframe width="100%" height="600" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/UK-Cats-Qkc0B5HpTzuh4xoLFJ446A?lat=50.418463&amp;lon=-4.789399&amp;zoom=9.138"&gt;&lt;/iframe&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-5" data-nodetype="expression">
-
-</div>
-</div>
-</div>
 
 
 <!-- -->
 
+<div class="ojs-auto-generated hidden">
 <script type="ojs-module-contents">
-{"contents":[
-  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${cat}</span>`", "cellName":"ojs-element-id-1"}
-,
-  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${cat}</span>`", "cellName":"ojs-element-id-2"}
-]}
+eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7Y2F0fTwvc3Bhbj5gIiwgImNlbGxOYW1lIjoib2pzLWVsZW1lbnQtaWQtMSJ9LCAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7Y2F0fTwvc3Bhbj5gIiwgImNlbGxOYW1lIjoib2pzLWVsZW1lbnQtaWQtMiJ9XX0=
 </script>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
 <!-- Begin Mailchimp Signup Form -->
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
 <style type="text/css">
+
 #mc_embed_signup{background:#fff; clear:left; font-family: "Karma", sans-serif;  width:300px;}
+
 .center {
+
         display: flex;
+
         justify-content: center;
+
         align-items: center;
+
         margin: 0 auto;
+
         text-align: center;
+
     }
+
 #mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%}
+
 #mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
+
 #mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+
 #mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+
 #mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+
 #mc_embed_signup input:focus {border-color:#333;}
+
 #mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; transition: all 0.23s ease-in-out 0s; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: normal; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: fit-content; width: -moz-fit-content;}
+
 #mc_embed_signup .button:hover {background-color:#777;}
+
 #mc_embed_signup .small-meta {font-size: 11px;}
+
 #mc_embed_signup .nowrap {white-space:nowrap;}     
+
 #mc_embed_signup .clear {clear:none; display:inline;}
+
 #mc_embed_signup .foot {display:grid; grid-template-columns: 3fr 1fr; align-items: center; width:97%;}
+
 @media screen and (max-width:400px) {#mc_embed_signup .foot {display:grid; grid-template-columns: 1fr; align-items: center;}}
+
+
 
 @media screen and (max-width:400px) {#mc_embed_signup .referralBadge {width:50%;}}
 
+
+
 #mc_embed_signup .brandingLogo {justify-self:right;}
+
 @media screen and (max-width:400px) {#mc_embed_signup .brandingLogo {justify-self:left;}}
 
+
+
 #mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+
 #mc_embed_signup input.email {font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; display:block; padding:0 0.4em; min-height:32px; width:96%; min-width:130px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 
+
+
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+
 #mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+
 #mc_embed_signup #mce-error-response {display:none;}
+
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
+
 #mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
 </style>
+
 <div class="center">
+
 <div id="mc_embed_signup">
+
     <form action="https://thegilpatrick.us11.list-manage.com/subscribe/post?u=eaf112d4f57b3ee0225c5ffcb&amp;id=01d72b9a9c&amp;f_id=00629ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
         <div id="mc_embed_signup_scroll">
+
 <div class="center mc-field-group">
+
 	<input type="email" placeholder="Your Email Address" name="EMAIL" class="required email" id="mce-EMAIL" required=""><input style="margin-top: 10px;" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+
 </div>
+
 	<div id="mce-responses" class="clear foot">
+
 		<div class="center response" id="mce-error-response" style="display:none"></div>
+
 		<div class="center response" id="mce-success-response" style="display:none"></div>
+
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_eaf112d4f57b3ee0225c5ffcb_01d72b9a9c" tabindex="-1" value=""></div>
+
         <div class="optionalParent">
+
             <div class="clear foot">
+
                 
+
                 
+
             </div>
+
         </div>
+
     </div>
+
 </form>
+
 </div>
+
 </div>
+
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 <!--End mc_embed_signup-->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"\r\nimport { aq, op } from \"@uwdata/arquero\"\r\nimport {button} from \"@jeremiak/download-data-button\"\r\n\r\ncats_uk = aq.loadCSV(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk.csv\")\r\n\r\ncats_uk_ref = aq.loadCSV(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk_reference.csv\")\r\n\r\ncombine = cats_uk.join(cats_uk_ref)\r\ndata = combine.objects()\r\n\r\nInputs.table(data)\r\nbutton(data, \"UK_Cats.csv\")\r\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"\r\nviewof color = {\r\n  const values =new Map([[\"# of Hours Indoors\", \"hrs_indoors\"], [\"# of Cats in Household\", \"n_cats\"], [\"Sex\", \"animal_sex\"], [\"Reproductive Status\", \"animal_reproductive_condition\"]]);\r\n  return Inputs.radio(values, {\r\n    key: values.keys().next().value\r\n  });\r\n}\r\n\r\ntime = d3.timeFormat(\"%B %d, %Y\")\r\n\r\nPlot.plot({\r\n  marginLeft: 50,\r\ncolor:{\r\n    scheme: \"Tableau10\",\r\n    label: color,\r\n    type: \"ordinal\",\r\n    legend: \"ramp\"\r\n  },\r\n  x: {\r\n    axis: \"top\",\r\n    grid: true\r\n  },\r\n  y: {\r\n    axis: null,\r\n    domain: d3.sort(data, d => d.deploy_on_date).map(d => d.animal_id)\r\n  },\r\n  marks: [\r\n    Plot.barX(data, {\r\n      x1: \"deploy_on_date\",\r\n      x2: \"deploy_off_date\",\r\n      y: \"animal_id\",\r\n      fill: color,\r\n      title: (d) => `${d.animal_id}\\nStudy Length: ${time(d.deploy_on_date)} - ${time(d.deploy_off_date)} \\nSex: ${d.animal_sex == \"m\" ? \"male\": \"female\"} \\nAge: ${d.age_years} years old \\n# of Cats in Household: ${d.n_cats}`\r\n    }),\r\n     Plot.text(cats_uk_ref.objects(), {\r\n      x: \"deploy_on_date\",\r\n      y: \"animal_id\",\r\n      text: \"animal_id\",\r\n      textAnchor: \"end\",\r\n      dx: -3\r\n    })\r\n  ]\r\n})\r\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"viewof cat = Inputs.select(data.map(d => d.animal_id), {value:\"Lightening Bugg\", label: \"Cat Tag\", sort: true, unique: true})\r\nviewof thresholds = Inputs.range([1, 40], {value: 10, step: 1, label: \"Thresholds\"})\r\nviewof bandwidth = Inputs.range([0, 40], {value: 20, step: 0.2, label: \"Bandwidth\"})\r\n\r\nPlot.plot({\r\n  inset:20,\r\n  marginLeft: 60,\r\n  marks: [\r\n    Plot.density(data.filter((d) => d.animal_id == cat), {x: \"location_long\", y: \"location_lat\", bandwidth, thresholds, clip: true}),\r\n    Plot.dot(data.filter((d) => d.animal_id == cat), {x: \"location_long\", y: \"location_lat\", })\r\n  ]\r\n})\r\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"\r\ndensity.legend(\"color\", {marginLeft: 5, label: \"Density\"})\r\n\r\ndensity = Plot.plot({\r\n  inset: 40,\r\n  marginLeft: 40,\r\n  color: {\r\n    scheme: \"ylgnbu\",\r\n  },\r\n  marks: [\r\n    Plot.density(data, {x: \"location_long\", y: \"location_lat\", fill: \"density\", clip: true}),\r\n    Plot.dot(data.filter((d) => d.animal_id == cat), {x: \"location_long\", y: \"location_lat\", stroke:\"red\", }),\r\n    Plot.text(data.filter((d) => d.animal_id == cat), {x: \"location_long\", y: \"location_lat\", dx: 7, fill: \"currentColor\", stroke: \"white\", textAnchor: \"start\", text: (d) => `${cat}`}),\r\n    Plot.frame()\r\n  ]\r\n})\r\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"html`\r\n<iframe width=\"100%\" height=\"600\" frameborder=\"0\" title=\"Felt Map\" src=\"https://felt.com/embed/map/UK-Cats-Qkc0B5HpTzuh4xoLFJ446A?lat=50.418463&lon=-4.789399&zoom=9.138\"></iframe>`\r\n"},{"methodName":"interpretQuiet","source":"shinyInput('color')"},{"methodName":"interpretQuiet","source":"shinyInput('cat')"},{"methodName":"interpretQuiet","source":"shinyInput('thresholds')"},{"methodName":"interpretQuiet","source":"shinyInput('bandwidth')"}]}
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxyXG5pbXBvcnQgeyBhcSwgb3AgfSBmcm9tIFwiQHV3ZGF0YS9hcnF1ZXJvXCJcclxuaW1wb3J0IHtidXR0b259IGZyb20gXCJAamVyZW1pYWsvZG93bmxvYWQtZGF0YS1idXR0b25cIlxyXG5cclxuY2F0c191ayA9IGFxLmxvYWRDU1YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vcmZvcmRhdGFzY2llbmNlL3RpZHl0dWVzZGF5L21hc3Rlci9kYXRhLzIwMjMvMjAyMy0wMS0zMS9jYXRzX3VrLmNzdlwiKVxyXG5cclxuY2F0c191a19yZWYgPSBhcS5sb2FkQ1NWKFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3Jmb3JkYXRhc2NpZW5jZS90aWR5dHVlc2RheS9tYXN0ZXIvZGF0YS8yMDIzLzIwMjMtMDEtMzEvY2F0c191a19yZWZlcmVuY2UuY3N2XCIpXHJcblxyXG5jb21iaW5lID0gY2F0c191ay5qb2luKGNhdHNfdWtfcmVmKVxyXG5kYXRhID0gY29tYmluZS5vYmplY3RzKClcclxuXHJcbklucHV0cy50YWJsZShkYXRhKVxyXG5idXR0b24oZGF0YSwgXCJVS19DYXRzLmNzdlwiKVxyXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcclxudmlld29mIGNvbG9yID0ge1xyXG4gIGNvbnN0IHZhbHVlcyA9bmV3IE1hcChbW1wiIyBvZiBIb3VycyBJbmRvb3JzXCIsIFwiaHJzX2luZG9vcnNcIl0sIFtcIiMgb2YgQ2F0cyBpbiBIb3VzZWhvbGRcIiwgXCJuX2NhdHNcIl0sIFtcIlNleFwiLCBcImFuaW1hbF9zZXhcIl0sIFtcIlJlcHJvZHVjdGl2ZSBTdGF0dXNcIiwgXCJhbmltYWxfcmVwcm9kdWN0aXZlX2NvbmRpdGlvblwiXV0pO1xyXG4gIHJldHVybiBJbnB1dHMucmFkaW8odmFsdWVzLCB7XHJcbiAgICBrZXk6IHZhbHVlcy5rZXlzKCkubmV4dCgpLnZhbHVlXHJcbiAgfSk7XHJcbn1cclxuXHJcbnRpbWUgPSBkMy50aW1lRm9ybWF0KFwiJUIgJWQsICVZXCIpXHJcblxyXG5QbG90LnBsb3Qoe1xyXG4gIG1hcmdpbkxlZnQ6IDUwLFxyXG5jb2xvcjp7XHJcbiAgICBzY2hlbWU6IFwiVGFibGVhdTEwXCIsXHJcbiAgICBsYWJlbDogY29sb3IsXHJcbiAgICB0eXBlOiBcIm9yZGluYWxcIixcclxuICAgIGxlZ2VuZDogXCJyYW1wXCJcclxuICB9LFxyXG4gIHg6IHtcclxuICAgIGF4aXM6IFwidG9wXCIsXHJcbiAgICBncmlkOiB0cnVlXHJcbiAgfSxcclxuICB5OiB7XHJcbiAgICBheGlzOiBudWxsLFxyXG4gICAgZG9tYWluOiBkMy5zb3J0KGRhdGEsIGQgPT4gZC5kZXBsb3lfb25fZGF0ZSkubWFwKGQgPT4gZC5hbmltYWxfaWQpXHJcbiAgfSxcclxuICBtYXJrczogW1xyXG4gICAgUGxvdC5iYXJYKGRhdGEsIHtcclxuICAgICAgeDE6IFwiZGVwbG95X29uX2RhdGVcIixcclxuICAgICAgeDI6IFwiZGVwbG95X29mZl9kYXRlXCIsXHJcbiAgICAgIHk6IFwiYW5pbWFsX2lkXCIsXHJcbiAgICAgIGZpbGw6IGNvbG9yLFxyXG4gICAgICB0aXRsZTogKGQpID0+IGAke2QuYW5pbWFsX2lkfVxcblN0dWR5IExlbmd0aDogJHt0aW1lKGQuZGVwbG95X29uX2RhdGUpfSAtICR7dGltZShkLmRlcGxveV9vZmZfZGF0ZSl9IFxcblNleDogJHtkLmFuaW1hbF9zZXggPT0gXCJtXCIgPyBcIm1hbGVcIjogXCJmZW1hbGVcIn0gXFxuQWdlOiAke2QuYWdlX3llYXJzfSB5ZWFycyBvbGQgXFxuIyBvZiBDYXRzIGluIEhvdXNlaG9sZDogJHtkLm5fY2F0c31gXHJcbiAgICB9KSxcclxuICAgICBQbG90LnRleHQoY2F0c191a19yZWYub2JqZWN0cygpLCB7XHJcbiAgICAgIHg6IFwiZGVwbG95X29uX2RhdGVcIixcclxuICAgICAgeTogXCJhbmltYWxfaWRcIixcclxuICAgICAgdGV4dDogXCJhbmltYWxfaWRcIixcclxuICAgICAgdGV4dEFuY2hvcjogXCJlbmRcIixcclxuICAgICAgZHg6IC0zXHJcbiAgICB9KVxyXG4gIF1cclxufSlcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGNhdCA9IElucHV0cy5zZWxlY3QoZGF0YS5tYXAoZCA9PiBkLmFuaW1hbF9pZCksIHt2YWx1ZTpcIkxpZ2h0ZW5pbmcgQnVnZ1wiLCBsYWJlbDogXCJDYXQgVGFnXCIsIHNvcnQ6IHRydWUsIHVuaXF1ZTogdHJ1ZX0pXHJcbnZpZXdvZiB0aHJlc2hvbGRzID0gSW5wdXRzLnJhbmdlKFsxLCA0MF0sIHt2YWx1ZTogMTAsIHN0ZXA6IDEsIGxhYmVsOiBcIlRocmVzaG9sZHNcIn0pXHJcbnZpZXdvZiBiYW5kd2lkdGggPSBJbnB1dHMucmFuZ2UoWzAsIDQwXSwge3ZhbHVlOiAyMCwgc3RlcDogMC4yLCBsYWJlbDogXCJCYW5kd2lkdGhcIn0pXHJcblxyXG5QbG90LnBsb3Qoe1xyXG4gIGluc2V0OjIwLFxyXG4gIG1hcmdpbkxlZnQ6IDYwLFxyXG4gIG1hcmtzOiBbXHJcbiAgICBQbG90LmRlbnNpdHkoZGF0YS5maWx0ZXIoKGQpID0+IGQuYW5pbWFsX2lkID09IGNhdCksIHt4OiBcImxvY2F0aW9uX2xvbmdcIiwgeTogXCJsb2NhdGlvbl9sYXRcIiwgYmFuZHdpZHRoLCB0aHJlc2hvbGRzLCBjbGlwOiB0cnVlfSksXHJcbiAgICBQbG90LmRvdChkYXRhLmZpbHRlcigoZCkgPT4gZC5hbmltYWxfaWQgPT0gY2F0KSwge3g6IFwibG9jYXRpb25fbG9uZ1wiLCB5OiBcImxvY2F0aW9uX2xhdFwiLCB9KVxyXG4gIF1cclxufSlcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXHJcbmRlbnNpdHkubGVnZW5kKFwiY29sb3JcIiwge21hcmdpbkxlZnQ6IDUsIGxhYmVsOiBcIkRlbnNpdHlcIn0pXHJcblxyXG5kZW5zaXR5ID0gUGxvdC5wbG90KHtcclxuICBpbnNldDogNDAsXHJcbiAgbWFyZ2luTGVmdDogNDAsXHJcbiAgY29sb3I6IHtcclxuICAgIHNjaGVtZTogXCJ5bGduYnVcIixcclxuICB9LFxyXG4gIG1hcmtzOiBbXHJcbiAgICBQbG90LmRlbnNpdHkoZGF0YSwge3g6IFwibG9jYXRpb25fbG9uZ1wiLCB5OiBcImxvY2F0aW9uX2xhdFwiLCBmaWxsOiBcImRlbnNpdHlcIiwgY2xpcDogdHJ1ZX0pLFxyXG4gICAgUGxvdC5kb3QoZGF0YS5maWx0ZXIoKGQpID0+IGQuYW5pbWFsX2lkID09IGNhdCksIHt4OiBcImxvY2F0aW9uX2xvbmdcIiwgeTogXCJsb2NhdGlvbl9sYXRcIiwgc3Ryb2tlOlwicmVkXCIsIH0pLFxyXG4gICAgUGxvdC50ZXh0KGRhdGEuZmlsdGVyKChkKSA9PiBkLmFuaW1hbF9pZCA9PSBjYXQpLCB7eDogXCJsb2NhdGlvbl9sb25nXCIsIHk6IFwibG9jYXRpb25fbGF0XCIsIGR4OiA3LCBmaWxsOiBcImN1cnJlbnRDb2xvclwiLCBzdHJva2U6IFwid2hpdGVcIiwgdGV4dEFuY2hvcjogXCJzdGFydFwiLCB0ZXh0OiAoZCkgPT4gYCR7Y2F0fWB9KSxcclxuICAgIFBsb3QuZnJhbWUoKVxyXG4gIF1cclxufSlcclxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjb2xvcicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdjYXQnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGhyZXNob2xkcycpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdiYW5kd2lkdGgnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -614,43 +665,58 @@ window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -658,445 +724,525 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        return container.innerHTML
-      } else {
-        return note.innerHTML;
-      }
-    } else {
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
-        }
-      } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
-          if (note !== null) {
-            const html = processXRef(id, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
           } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+            window.location.href = sourceUrl;
           }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
       });
     }
-  }
-});
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> UK Pet Cats</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Scott Franz </span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 1/31/2023</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> A Tidy Tuesday visualization of UK pet cats.</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> cats.png</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="an">image-alt:</span><span class="co"> Density map of UK pet cats</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Tidy Tuesday, Observable JS]</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span> </span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>I wanted to do a Tidy Tuesday blog post for a while now and I finally carved out some time to make one. This week has tracking data from a study on pet cats, looks like only the UK test site was included. Checkout the <span class="co">[</span><span class="ot">Github Readme</span><span class="co">](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-01-31#pet-cats-uk)</span> for more info.</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Processing</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>I decided to use Observable JS this week and imported the <span class="co">[</span><span class="ot">Arquero</span><span class="co">](https://observablehq.com/@uwdata/introducing-arquero)</span> library in the spirit of being tidy. Arquero is basically dplyr for JavaScript, so if you were too annoyed or intimidated by JavaScript data wrangling methods before hopefully this gives you another excuse to try it out. I didn't do much processing this week, just combined the <span class="in">`cats_uk.csv`</span> with the <span class="in">`cats_uk_reference.csv`</span>. I left in all of the outliers and didn't compute any summary statistics. You can download my combined dataset by clicking on the button below.</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">"@uwdata/arquero"</span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {button} <span class="im">from</span> <span class="st">"@jeremiak/download-data-button"</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>cats_uk <span class="op">=</span> aq<span class="op">.</span><span class="fu">loadCSV</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk.csv"</span>)</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>cats_uk_ref <span class="op">=</span> aq<span class="op">.</span><span class="fu">loadCSV</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk_reference.csv"</span>)</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>combine <span class="op">=</span> cats_uk<span class="op">.</span><span class="fu">join</span>(cats_uk_ref)</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> combine<span class="op">.</span><span class="fu">objects</span>()</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="fu">button</span>(data<span class="op">,</span> <span class="st">"UK_Cats.csv"</span>)</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## UK Cat Timeline</span></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>First, I wanted to see how long each cat was tracked. It looked like the majority were tracked for only a week or less (except for Jessie and Macauley Mccat). If you hover over the bar for each cat with your mouse it will give you more information. In addition, I colored the cats' bars by the number of reported hours they were indoors. But if you would prefer to group them differently try the following options.</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>viewof color <span class="op">=</span> {</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> values <span class="op">=</span><span class="kw">new</span> <span class="bu">Map</span>([[<span class="st">"# of Hours Indoors"</span><span class="op">,</span> <span class="st">"hrs_indoors"</span>]<span class="op">,</span> [<span class="st">"# of Cats in Household"</span><span class="op">,</span> <span class="st">"n_cats"</span>]<span class="op">,</span> [<span class="st">"Sex"</span><span class="op">,</span> <span class="st">"animal_sex"</span>]<span class="op">,</span> [<span class="st">"Reproductive Status"</span><span class="op">,</span> <span class="st">"animal_reproductive_condition"</span>]])<span class="op">;</span></span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">radio</span>(values<span class="op">,</span> {</span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">key</span><span class="op">:</span> values<span class="op">.</span><span class="fu">keys</span>()<span class="op">.</span><span class="fu">next</span>()<span class="op">.</span><span class="at">value</span></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> d3<span class="op">.</span><span class="fu">timeFormat</span>(<span class="st">"%B %d, %Y"</span>)</span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="dt">color</span><span class="op">:</span>{</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Tableau10"</span><span class="op">,</span></span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> color<span class="op">,</span></span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span><span class="op">,</span></span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="st">"ramp"</span></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">sort</span>(data<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">deploy_on_date</span>)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span>)</span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span>(data<span class="op">,</span> {</span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x1</span><span class="op">:</span> <span class="st">"deploy_on_date"</span><span class="op">,</span></span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x2</span><span class="op">:</span> <span class="st">"deploy_off_date"</span><span class="op">,</span></span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"animal_id"</span><span class="op">,</span></span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> color<span class="op">,</span></span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>      <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">animal_id</span><span class="sc">}\n</span><span class="vs">Study Length: </span><span class="sc">${</span><span class="fu">time</span>(d<span class="op">.</span><span class="at">deploy_on_date</span>)<span class="sc">}</span><span class="vs"> - </span><span class="sc">${</span><span class="fu">time</span>(d<span class="op">.</span><span class="at">deploy_off_date</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs">Sex: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">animal_sex</span> <span class="op">==</span> <span class="st">"m"</span> <span class="op">?</span> <span class="st">"male"</span><span class="op">:</span> <span class="st">"female"</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs">Age: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">age_years</span><span class="sc">}</span><span class="vs"> years old </span><span class="sc">\n</span><span class="vs"># of Cats in Household: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">n_cats</span><span class="sc">}</span><span class="vs">`</span></span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>     Plot<span class="op">.</span><span class="fu">text</span>(cats_uk_ref<span class="op">.</span><span class="fu">objects</span>()<span class="op">,</span> {</span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"deploy_on_date"</span><span class="op">,</span></span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"animal_id"</span><span class="op">,</span></span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">"animal_id"</span><span class="op">,</span></span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>      <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"end"</span><span class="op">,</span></span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>      <span class="dt">dx</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span></span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## Explore Your Favorite Cat</span></span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>This section was heavily inspired by <span class="co">[</span><span class="ot">Plot's density mark tutorial</span><span class="co">](https://observablehq.com/@observablehq/plot-density)</span> . I wanted to see each individual cat's footprint for their respective week. You can select your favorite cat using the dropdown below. Some cats barely roamed at all, while others went all over the place. With this plot it is really easy to spot some of the outliers. You can play around with the <span class="in">`thresholds`</span> and <span class="in">`bandwidth`</span> of the plot as well.</span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>viewof cat <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span>)<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span><span class="st">"Lightening Bugg"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Cat Tag"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span>})</span>
-<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>viewof thresholds <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Thresholds"</span>})</span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>viewof bandwidth <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bandwidth"</span>})</span>
-<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inset</span><span class="op">:</span><span class="dv">20</span><span class="op">,</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">density</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> bandwidth<span class="op">,</span> thresholds<span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> })</span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a><span class="fu">#### ${cat}'s Location in Relation to All Cats</span></span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>Now that you found ${cat} you can see where they are relative to all of their cat peers. As you can see there were a bunch in a pretty small area. Try picking another cat and see where they end up on this density plot.</span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>density<span class="op">.</span><span class="fu">legend</span>(<span class="st">"color"</span><span class="op">,</span> {<span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Density"</span>})</span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>density <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inset</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
-<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
-<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"ylgnbu"</span><span class="op">,</span></span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">density</span>(data<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"density"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span><span class="st">"red"</span><span class="op">,</span> })<span class="op">,</span></span>
-<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="dv">7</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>cat<span class="sc">}</span><span class="vs">`</span>})<span class="op">,</span></span>
-<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">frame</span>()</span>
-<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>  ]</span>
-<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a><span class="fu">## Felt</span></span>
-<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>Last thing, I have been following Felt on twitter for a while now.</span>
-<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a>I saw this <span class="co">[</span><span class="ot">tweet</span><span class="co">](https://twitter.com/felt/status/1620467130826358784?s=20&amp;t=CviOaHu67-VGvZzx11Ebrw)</span> and immediately needed to try it. It was super simple to just drag and drop a .csv file and get going. Check it out! You should be able to edit this map if you create your own Felt account. Thanks for reading!</span>
-<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`</span></span>
-<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;iframe width="100%" height="600" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/UK-Cats-Qkc0B5HpTzuh4xoLFJ446A?lat=50.418463&amp;lon=-4.789399&amp;zoom=9.138"&gt;&lt;/iframe&gt;`</span></span>
-<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/thegilpatrick\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> UK Pet Cats</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Scott Franz </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 1/31/2023</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> A Tidy Tuesday visualization of UK pet cats.</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> cats.png</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="an">image-alt:</span><span class="co"> Density map of UK pet cats</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Tidy Tuesday, Observable JS]</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span> </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>I wanted to do a Tidy Tuesday blog post for a while now and I finally carved out some time to make one. This week has tracking data from a study on pet cats, looks like only the UK test site was included. Checkout the <span class="co">[</span><span class="ot">Github Readme</span><span class="co">](https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-01-31#pet-cats-uk)</span> for more info.</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Processing</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>I decided to use Observable JS this week and imported the <span class="co">[</span><span class="ot">Arquero</span><span class="co">](https://observablehq.com/@uwdata/introducing-arquero)</span> library in the spirit of being tidy. Arquero is basically dplyr for JavaScript, so if you were too annoyed or intimidated by JavaScript data wrangling methods before hopefully this gives you another excuse to try it out. I didn't do much processing this week, just combined the <span class="in">`cats_uk.csv`</span> with the <span class="in">`cats_uk_reference.csv`</span>. I left in all of the outliers and didn't compute any summary statistics. You can download my combined dataset by clicking on the button below.</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">"@uwdata/arquero"</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {button} <span class="im">from</span> <span class="st">"@jeremiak/download-data-button"</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>cats_uk <span class="op">=</span> aq<span class="op">.</span><span class="fu">loadCSV</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk.csv"</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>cats_uk_ref <span class="op">=</span> aq<span class="op">.</span><span class="fu">loadCSV</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk_reference.csv"</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>combine <span class="op">=</span> cats_uk<span class="op">.</span><span class="fu">join</span>(cats_uk_ref)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> combine<span class="op">.</span><span class="fu">objects</span>()</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="fu">button</span>(data<span class="op">,</span> <span class="st">"UK_Cats.csv"</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## UK Cat Timeline</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>First, I wanted to see how long each cat was tracked. It looked like the majority were tracked for only a week or less (except for Jessie and Macauley Mccat). If you hover over the bar for each cat with your mouse it will give you more information. In addition, I colored the cats' bars by the number of reported hours they were indoors. But if you would prefer to group them differently try the following options.</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>viewof color <span class="op">=</span> {</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> values <span class="op">=</span><span class="kw">new</span> <span class="bu">Map</span>([[<span class="st">"# of Hours Indoors"</span><span class="op">,</span> <span class="st">"hrs_indoors"</span>]<span class="op">,</span> [<span class="st">"# of Cats in Household"</span><span class="op">,</span> <span class="st">"n_cats"</span>]<span class="op">,</span> [<span class="st">"Sex"</span><span class="op">,</span> <span class="st">"animal_sex"</span>]<span class="op">,</span> [<span class="st">"Reproductive Status"</span><span class="op">,</span> <span class="st">"animal_reproductive_condition"</span>]])<span class="op">;</span></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">radio</span>(values<span class="op">,</span> {</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">key</span><span class="op">:</span> values<span class="op">.</span><span class="fu">keys</span>()<span class="op">.</span><span class="fu">next</span>()<span class="op">.</span><span class="at">value</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> d3<span class="op">.</span><span class="fu">timeFormat</span>(<span class="st">"%B %d, %Y"</span>)</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="dt">color</span><span class="op">:</span>{</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"Tableau10"</span><span class="op">,</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> color<span class="op">,</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">type</span><span class="op">:</span> <span class="st">"ordinal"</span><span class="op">,</span></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="st">"ramp"</span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span><span class="op">,</span></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>    <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">sort</span>(data<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">deploy_on_date</span>)<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span>)</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span>(data<span class="op">,</span> {</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x1</span><span class="op">:</span> <span class="st">"deploy_on_date"</span><span class="op">,</span></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x2</span><span class="op">:</span> <span class="st">"deploy_off_date"</span><span class="op">,</span></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"animal_id"</span><span class="op">,</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> color<span class="op">,</span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>      <span class="dt">title</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">animal_id</span><span class="sc">}\n</span><span class="vs">Study Length: </span><span class="sc">${</span><span class="fu">time</span>(d<span class="op">.</span><span class="at">deploy_on_date</span>)<span class="sc">}</span><span class="vs"> - </span><span class="sc">${</span><span class="fu">time</span>(d<span class="op">.</span><span class="at">deploy_off_date</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs">Sex: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">animal_sex</span> <span class="op">==</span> <span class="st">"m"</span> <span class="op">?</span> <span class="st">"male"</span><span class="op">:</span> <span class="st">"female"</span><span class="sc">}</span><span class="vs"> </span><span class="sc">\n</span><span class="vs">Age: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">age_years</span><span class="sc">}</span><span class="vs"> years old </span><span class="sc">\n</span><span class="vs"># of Cats in Household: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">n_cats</span><span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>     Plot<span class="op">.</span><span class="fu">text</span>(cats_uk_ref<span class="op">.</span><span class="fu">objects</span>()<span class="op">,</span> {</span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"deploy_on_date"</span><span class="op">,</span></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"animal_id"</span><span class="op">,</span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">"animal_id"</span><span class="op">,</span></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>      <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"end"</span><span class="op">,</span></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>      <span class="dt">dx</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## Explore Your Favorite Cat</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>This section was heavily inspired by <span class="co">[</span><span class="ot">Plot's density mark tutorial</span><span class="co">](https://observablehq.com/@observablehq/plot-density)</span> . I wanted to see each individual cat's footprint for their respective week. You can select your favorite cat using the dropdown below. Some cats barely roamed at all, while others went all over the place. With this plot it is really easy to spot some of the outliers. You can play around with the <span class="in">`thresholds`</span> and <span class="in">`bandwidth`</span> of the plot as well.</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>viewof cat <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(data<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span>)<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span><span class="st">"Lightening Bugg"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Cat Tag"</span><span class="op">,</span> <span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>viewof thresholds <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Thresholds"</span>})</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>viewof bandwidth <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.2</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bandwidth"</span>})</span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inset</span><span class="op">:</span><span class="dv">20</span><span class="op">,</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span></span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">density</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> bandwidth<span class="op">,</span> thresholds<span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> })</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a><span class="fu">#### ${cat}'s Location in Relation to All Cats</span></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>Now that you found ${cat} you can see where they are relative to all of their cat peers. As you can see there were a bunch in a pretty small area. Try picking another cat and see where they end up on this density plot.</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>density<span class="op">.</span><span class="fu">legend</span>(<span class="st">"color"</span><span class="op">,</span> {<span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Density"</span>})</span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>density <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>  <span class="dt">inset</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"ylgnbu"</span><span class="op">,</span></span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">density</span>(data<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"density"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span><span class="st">"red"</span><span class="op">,</span> })<span class="op">,</span></span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">text</span>(data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">animal_id</span> <span class="op">==</span> cat)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"location_long"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"location_lat"</span><span class="op">,</span> <span class="dt">dx</span><span class="op">:</span> <span class="dv">7</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"white"</span><span class="op">,</span> <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>cat<span class="sc">}</span><span class="vs">`</span>})<span class="op">,</span></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">frame</span>()</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

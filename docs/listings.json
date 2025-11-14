@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/weather-in-my-life/index.html",
       "/posts/salvador-dahlia/index.html",
       "/posts/google-sheets/index.html",
       "/posts/recipe-web-scrape/index.html",
@@ -10,12 +11,6 @@
       "/posts/hello-observable/index.html",
       "/posts/nba-stats-exploration/index.html",
       "/posts/your-life-in-weeks/index.html"
-    ]
-  },
-  {
-    "listing": "/about.html",
-    "items": [
-      "/authors/scott_franz/index.html"
     ]
   }
 ]

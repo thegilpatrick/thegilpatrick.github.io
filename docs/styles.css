@@ -1,7 +1,8 @@
 /* css styles */
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+body {font-size:large; font-family: "Karma", sans-serif;}
 h1,h2,h3,h4 {
   font-weight: 400;
+  font-family: "Karma", sans-serif;
 }
 .navbar-brand > img {
     max-height: 70px;

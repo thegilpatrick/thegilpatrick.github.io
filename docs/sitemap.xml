@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://thegilpatrick.com/posts/your-life-in-weeks/index.html</loc>
-    <lastmod>2023-06-19T20:30:04.327Z</lastmod>
+    <loc>https://thegilpatrick.github.io/posts/your-life-in-weeks/index.html</loc>
+    <lastmod>2025-11-14T20:49:27.758Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/posts/salvador-dahlia/index.html</loc>
+    <loc>https://thegilpatrick.github.io/posts/salvador-dahlia/index.html</loc>
     <lastmod>2023-10-16T18:18:50.547Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/posts/R-TidyCensus/index.html</loc>
+    <loc>https://thegilpatrick.github.io/posts/R-TidyCensus/index.html</loc>
     <lastmod>2023-06-27T20:01:31.631Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/posts/nba-stats-exploration/index.html</loc>
+    <loc>https://thegilpatrick.github.io/posts/nba-stats-exploration/index.html</loc>
     <lastmod>2023-06-19T20:31:12.906Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/posts/google-sheets/index.html</loc>
+    <loc>https://thegilpatrick.github.io/posts/google-sheets/index.html</loc>
     <lastmod>2023-07-07T15:03:14.006Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/index.html</loc>
-    <lastmod>2023-10-02T19:07:55.578Z</lastmod>
+    <loc>https://thegilpatrick.github.io/index.html</loc>
+    <lastmod>2025-11-14T20:54:23.455Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/about.html</loc>
-    <lastmod>2023-10-02T19:21:19.717Z</lastmod>
+    <loc>https://thegilpatrick.github.io/posts/hello-observable/index.html</loc>
+    <lastmod>2023-11-14T18:42:45.840Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/authors/scott_franz/index.html</loc>
-    <lastmod>2023-10-16T18:24:34.386Z</lastmod>
+    <loc>https://thegilpatrick.github.io/posts/pet-cats-uk/index.html</loc>
+    <lastmod>2024-10-22T18:33:08.531Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/posts/hello-observable/index.html</loc>
-    <lastmod>2023-06-21T15:35:54.755Z</lastmod>
+    <loc>https://thegilpatrick.github.io/posts/recipe-web-scrape/index.html</loc>
+    <lastmod>2025-11-14T20:48:13.727Z</lastmod>
   </url>
   <url>
-    <loc>https://thegilpatrick.com/posts/pet-cats-uk/index.html</loc>
-    <lastmod>2023-06-20T17:13:00.659Z</lastmod>
-  </url>
-  <url>
-    <loc>https://thegilpatrick.com/posts/recipe-web-scrape/index.html</loc>
-    <lastmod>2023-06-27T20:48:58.485Z</lastmod>
+    <loc>https://thegilpatrick.github.io/posts/weather-in-my-life/index.html</loc>
+    <lastmod>2025-11-14T20:43:15.036Z</lastmod>
   </url>
 </urlset>
